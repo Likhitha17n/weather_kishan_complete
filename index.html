@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namma Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Logo -->
+    <div class="logo">
+      <h1>🌞☁️ Namma Weather ☀️🌧️</h1>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" onclick="showHome()">Home</a></li>
+        <li class="nav-item"><a href="#" onclick="showAbout()">About</a></li>
+        <li class="nav-item">
+          <a href="https://github.com/kishan9535">Contributors</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="home" class="container">
+      <header>
+        <div class="homepage">
+          <h1 class="landing-text">Namma Weather</h1>
+          <p class="landing-text-2">
+            Where Is The Sun? Is It Above Or Below The Clouds?
+          </p>
+        </div>
+      </header>
+
+      <!-- Search Form -->
+      <div class="form">
+        <input id="input" type="text" placeholder="Enter a city name" />
+        <button id="button" class="button" onclick="getWeather()">GO</button>
+        <button id="location-button" class="button" onclick="getLocationWeather()">Use My Location</button>
+      </div>
+
+      <!-- Weather Result -->
+      <div class="result-container">
+        <div id="loader" class="loader"></div>
+        <div id="result" class="result-box" style="display: none">
+          <h2 id="city-name"></h2>
+          <p id="weather-desc"></p>
+          <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+          <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+          <p><strong>Wind Speed:</strong> <span id="wind-speed"></span> km/h</p>
+        </div>
+      </div>
+
+      <!-- Hourly Weather Chart -->
+      <div id="hourly-chart-container" style="display: none">
+        <canvas id="hourlyChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="about-section" style="display: none">
+      <!-- Your About Section -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="social-links">
+        <!-- Social Media Links -->
+      </div>
+      <p>&copy; <span id="copyrightYear"></span> Namma Weather™</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
